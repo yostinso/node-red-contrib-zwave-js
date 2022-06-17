@@ -21,7 +21,8 @@ function GrabImage() {
 			document.body.append(FI);
 			FI.addEventListener('change', SubmitPhoto, false);
 			FI.setAttribute('type', 'file');
-			FI.setAttribute('accept', 'image/*;capture=camera');
+			FI.setAttribute('capture', 'environment');
+			FI.setAttribute('accept', 'image/*');
 			FI.click();
 		})
 		.catch((Err) => {
